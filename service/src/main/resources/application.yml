@@ -1,0 +1,15 @@
+
+
+datasource:
+  url: localhost:3306/oes
+
+spring:
+  main:
+    #   自动处理循环依赖
+    allow-circular-references: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://${datasource.url}?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useAffectedRows=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
